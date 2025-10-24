@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Seth Jovellana</title>
+    <meta name="description" content="Personal portfolio showcasing projects, experience, and contact information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav wrapper" aria-label="Primary">
+            <a class="brand" href="#hero">Reuben Seth Jovellana</a>
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+            <div class="nav-links" id="primary-navigation">
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#skills">Skills</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+                    <span aria-hidden="true">☀️</span>
+                    <span id="theme-toggle-label">Light</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="wrapper hero fade-in" id="hero">
+            <div class="hero-text">
+                <span class="eyebrow">Cavite, Philippines</span>
+                <h1 class="headline">Hi, I am <span class="accent">Seth</span>, a<span class="typed" id="typed"></span></h1>
+                <div class="cta-group">
+                    <a class="btn btn-primary" href="#projects">View Projects</a>
+                    <a class="btn btn-secondary" href="#contact">Let's Talk</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">04+</div>
+                    <div class="stat-label">Years of programming</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">13</div>
+                    <div class="stat-label">Team & solo builds done</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">03</div>
+                    <div class="stat-label">Research papers and Data Modeled</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper about fade-in" id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <p>Through my coursework, I’ve gained a strong foundation in data structures and algorithms, data modeling, computational science, and machine learning.</p>
+                <p>I’m always eager to learn new technologies, solve complex problems, and collaborate with others to deliver user-centric software.</p>
+                <p>Beyond software engineering, I'm passionate about literature and music. I love reading novels and playing the guitar. </p>
+            </div>
+            <div class="highlight-grid">
+                <article class="highlight-card">
+                    <h3 class="highlight-title">Academic Highlights</h3>
+                    <ul>
+                        <li>AY 2024-2025, Term 2 Second Honors Dean's Lister</li>
+                        <li>AY 2022-2023, Term 3 First Honors Dean's Lister</li>
+                    </ul>
+                </article>
+                <article class="highlight-card">
+                    <h3 class="highlight-title">Currently Learning</h3>
+                    <p>2.5D Game in Unity and C# scripting, Parallel and Distributed Computing with C++, and Web AI Integration. </p>
+                </article>
+            </div>
+        </section>
+        <section class="wrapper fade-in" id="projects">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-controls" role="group" aria-label="Filter projects">
+                <button class="chip is-active" data-filter="all" type="button">All</button>
+                <button class="chip" data-filter="personal" type="button">Personal</button>
+                <button class="chip" data-filter="academic" type="button">Academic</button>
+            </div>
+            <div class="project-grid" id="project-grid">
+                <article class="project-card" data-tags="personal">
+                    <h3>Book Recommender</h3>
+                    <p>A personally curated book recommendations with filters for genres, popularity, and era. Each book links to its Goodreads page. Made with Vanilla JavaScript and HTML / CSS for the front-end; Node.js and Express.js for the back-end; MongoDB as the database and Render for hosting.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Web Dev</span>
+                    </div>
+                    <a class="btn btn-secondary" href="https://book-recommender-g7jn.onrender.com" target="_blank" aria-label="Open website">View Website (Render)</a>
+                </article>
+                <article class="project-card" data-tags="academic">
+                    <h3>An Agent-Based Model of Mononucleosis ("Kissing Disease") Transmission in a Nightlife Environment</h3>
+                    <p>Modeled Mononucleosis transmission in a nightlife environment using an agent-based model in Jupyter Notebook. Used <em>numpy</em> and <em>matplotlib</em> to simulate the spread of the disease through different scenarios in real time.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Data Modeling</span>
+                        <span class="project-tag">Live Simulation</span>
+                    </div>
+                    <a class="btn btn-secondary" href="https://colab.research.google.com/drive/1o5hY_cYTMLNuZSHnj5VzrHdxZNUEdIGe?usp=sharing" target="_blank" aria-label="Open Jupyter Notebook">View Jupyter Notebook</a>
+                </article>
+                <article class="project-card" data-tags="academic">
+                    <h3>Text-Based Chatbot for Empathic Responses to Dream Descriptions</h3>
+                    <p>Developed a chatbot prototype called <em>DreamOn</em> designed to provide empathetic feedback in dream journaling. The project analyzed how message style, visual cues, and interactivity influence perceived empathy.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Research Paper</span>
+                        <span class="project-tag">Artificial Intelligence</span>
+                    </div>
+                    <a class="btn btn-secondary" href="https://drive.google.com/file/d/1dcfHnRGQV0V-P10x19526UPcCbQ09BTR/view?usp=sharing" target="_blank" aria-label="Open research paper">View paper (PDF)</a>
+                </article>
+                <article class="project-card" data-tags="academic">
+                    <h3>Global Ecological Footprint 2023 Data Modeling</h3>
+                    <p>Performed data modeling on a public dataset uploaded by JAINA on Kaggle using Python. Utilized <em>pandas</em>, <em>numpy</em>, and <em>matplotlib</em> for data cleaning, exploratory data analysis, data modeling, and statistical inference.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Data Modeling</span>
+                        <span class="project-tag">Jupyter Notebook</span>
+                    </div>
+                    <a class="btn btn-secondary" href="https://github.com/jayylmao/CSMODEL" target="_blank" aria-label="Open GitHub link">View GitHub</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrapper fade-in" id="skills">
+            <h2 class="section-title">Skills & Tools</h2>
+            <div class="skills-grid" id="skills-grid">
+                <article class="skill-card" data-skill="Web">
+                    <h3>Full-Stack Web Development</h3>
+                    <p>Build full-stack websites that pair responsive React front-ends with Node.js and Express APIs, and MongoDB as the database.</p>
+                    <div class="skill-bar" aria-hidden="true"><span data-progress="100"></span></div>
+                    <div class="metrics">
+                        <div class="metric"><span>React</span><span>MongoDB</span></div>
+                        <div class="metric"><span>Node.js</span><span>Express.js</span></div>
+                    </div>
+                </article>
+                <article class="skill-card" data-skill="Data">
+                    <h3>Data Modeling</h3>
+                    <p>Design reproducible analysis pipelines in Python, wrangling datasets inside Jupyter Notebook with pandas, NumPy, and visualization tooling to surface trends and test hypotheses.</p>
+                    <div class="skill-bar" aria-hidden="true"><span data-progress="80"></span></div>
+                    <div class="metrics">
+                        <div class="metric"><span>Python</span><span>Jupyter Notebook</span></div>
+                         <div class="metric"><span>Data Analysis</span><span></span></div>
+                    </div>
+                </article>
+                <article class="skill-card" data-skill="Engineering">
+                    <h3>Software Development Life Cycle</h3>
+                    <p>Drive projects through the full SDLC using the Agile method, validating features through QA, and keeping delivery steady with CI/CD automation.</p>
+                    <div class="skill-bar" aria-hidden="true"><span data-progress="90"></span></div>
+                    <div class="metrics">
+                        <div class="metric"><span>Agile</span><span>Quality Assurance</span></div>
+                        <div class="metric"><span>CI / CD</span><span>Jest</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrapper contact fade-in" id="contact">
+            <h2 class="section-title">Let's Collaborate</h2>
+            <div class="contact-grid">
+                <article class="contact-card">
+                    <h3>Availability</h3>
+                    <p>Deployment date starts on January 05, 2026.</p>
+                    <br>
+                    <ul>
+                        <li>Email: <a href="mailto:reuben_jovellana@dlsu.edu.ph">reuben_jovellana@dlsu.edu.ph</a></li>
+                        <li>Resume: Please see <a href="#">here</a></li>
+                        <li>Calendar: <a href="https://calendar.app.google/M2ukLbBtS3jcrKqp6" target="_blank">Schedule a chat</a></li>
+                    </ul>
+                </article>
+                <form id="contact-form" action="https://formsubmit.co/ab63b942afeb0789defcc6cf43c54bac" method="post">
+                    <input type="hidden" name="_subject" value="New contact from portfolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <label class="sr-only" for="website">Leave this field blank</label>
+                    <input id="website" name="_honey" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-honey">
+                    <div>
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="name@company.com" required>
+                    </div>
+                    <div>
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text"  required>
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <p id="contact-status" class="form-status" role="status" aria-live="polite"></p>
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrapper footer-grid">
+            <div>© <span id="year"></span> Reuben Seth Jovellana.</div>
+            <div class="socials">
+                <a class="social-link" href="https://www.linkedin.com/in/reuben-seth-jovellana-5bb131291/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
