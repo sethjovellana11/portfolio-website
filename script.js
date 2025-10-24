@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	if (typed) {
-		const typedWords = [' Full-Stack Web Developer', 'n Aspiring Computer Scientist', ' Cool Dude'];
+		const typedWords = [' Full-Stack Web Developer', 'n Aspiring Software Engineer', ' Cool Dude'];
 		let wordIndex = 0;
 		let charIndex = 0;
 		let isDeleting = false;
