@@ -8,11 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const navLinksContainer = document.getElementById('primary-navigation');
 	const navLinks = navLinksContainer ? navLinksContainer.querySelectorAll('.nav-link') : [];
 
-	const filterButtons = document.querySelectorAll('.chip');
-	const projectCards = document.querySelectorAll('.project-card');
 	const sections = document.querySelectorAll('main section');
 	const fadeTargets = document.querySelectorAll('.fade-in');
-	const skillSpans = document.querySelectorAll('.skill-bar span');
 	const typed = document.getElementById('typed');
 	const contactForm = document.getElementById('contact-form');
 	const contactStatus = document.getElementById('contact-status');
@@ -59,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	if (typed) {
-		const typedWords = [' Full-Stack Web Developer', 'n Aspiring Software Engineer', ' Cool Dude'];
+		const typedWords = [' Full-Stack Web Developer', ' Software Engineer', ' Data Scientist'];
 		let wordIndex = 0;
 		let charIndex = 0;
 		let isDeleting = false;
@@ -87,25 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		typeLoop();
 	}
 
-	if (filterButtons.length && projectCards.length) {
-		filterButtons.forEach(button => {
-			button.addEventListener('click', () => {
-				filterButtons.forEach(btn => btn.classList.remove('is-active'));
-				button.classList.add('is-active');
-				const filter = button.dataset.filter;
-
-				projectCards.forEach(card => {
-					const tags = card.dataset.tags.split(' ');
-					const isVisible = filter === 'all' || tags.includes(filter);
-					card.style.display = isVisible ? 'grid' : 'none';
-					requestAnimationFrame(() => {
-						card.style.opacity = isVisible ? '1' : '0';
-					});
-				});
-			});
-		});
-	}
-
 	if (fadeTargets.length) {
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
@@ -117,20 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}, { threshold: 0.18 });
 
 		fadeTargets.forEach(section => observer.observe(section));
-	}
-
-	if (skillSpans.length) {
-		const skillsObserver = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					const progress = entry.target.dataset.progress;
-					entry.target.style.width = progress + '%';
-					skillsObserver.unobserve(entry.target);
-				}
-			});
-		}, { threshold: 0.6 });
-
-		skillSpans.forEach(span => skillsObserver.observe(span));
 	}
 
 	if (sections.length && navLinks.length) {
